@@ -18,7 +18,7 @@ This project implements an advanced Retrieval-Augmented Generation (RAG) system 
 *   **Traditional Vector Search**: Utilizes Hugging Face `sentence-transformers` for embeddings and Pinecone as the vector database for efficient semantic search.
 *   **Graph-Based Knowledge Representation**: Extracts entities and simple relations from text using `spaCy` and stores them in an in-memory `networkx` graph.
 *   **Hybrid Retrieval**: Combines results from vector search (relevant text chunks) and graph traversal (related entities/facts) to create a richer context.
-*   **Context-Aware Generation**: Employs a Hugging Face causal language model (`distilgpt2`) to synthesize answers based on the combined retrieved context.
+*   **Context-Aware Generation**: Employs a Hugging Face causal language model (`google/flan-t5-base`) to synthesize answers based on the combined retrieved context.
 *   **User-Friendly Interface**: Built with Streamlit for an interactive and accessible web demo.
 
 ## Technical Stack
@@ -26,7 +26,7 @@ This project implements an advanced Retrieval-Augmented Generation (RAG) system 
 *   **Embedding Model**: `sentence-transformers` (`all-MiniLM-L6-v2`)
 *   **Vector Database**: Pinecone
 *   **Knowledge Graph**: `spaCy` for NLP, `networkx` for graph representation
-*   **Language Model**: Hugging Face Transformers (`distilgpt2`)
+*   **Language Model**: Hugging Face Transformers (`google/flan-t5-base`)
 *   **Application Framework**: Streamlit
 *   **Environment Management**: `python-dotenv` for local secrets
 *   **Deployment**: Docker (for Hugging Face Spaces)
@@ -104,5 +104,6 @@ This project implements an advanced Retrieval-Augmented Generation (RAG) system 
 *   Improve the UX/UI with more detailed context visualization.
 *   Support for larger language models (requires more powerful compute resources).
 *   Add a mechanism to easily update the Pinecone index and knowledge graph with new data.
+
 
 ---
