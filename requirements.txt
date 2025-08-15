@@ -1,0 +1,10 @@
+streamlit
+spacy
+nltk
+sentence-transformers
+transformers
+torch
+networkx
+tqdm
+pinecone
+python-dotenv
