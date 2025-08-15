@@ -78,7 +78,7 @@ def process_and_upsert_data(data_path: str = "data/health_corpus.txt"):
             "id": f"chunk-{i}",
             "values": embedding,
             "metadata": {"text": chunk, "source": data_path}
-        }))
+        })
     batch_size = 100
     for i in tqdm(range(0, len(vectors_to_upsert), batch_size), desc="Upserting to Pinecone"):
         batch = vectors_to_upsert[i:i + batch_size]
@@ -90,3 +90,4 @@ if __name__ == "__main__":
     os.makedirs('data', exist_ok=True)
     process_and_upsert_data()
     
+
